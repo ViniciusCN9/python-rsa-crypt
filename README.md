@@ -41,17 +41,12 @@ python-rsa-crypt/
 
 ### Executando o Programa
 
-1. Navegue até a pasta `src/`:
+1. Execute o arquivo `main.py`:
      ```bash
-     cd src
+     python src/main.py
      ```
 
-2. Execute o arquivo `main.py`:
-     ```bash
-     python main.py
-     ```
-
-3. Siga as instruções no menu interativo para gerar chaves, criptografar ou descriptografar mensagens.
+2. Siga as instruções no menu interativo para gerar chaves, criptografar ou descriptografar mensagens.
 
 ### Exemplo de Uso
 
