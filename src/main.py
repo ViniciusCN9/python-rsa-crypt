@@ -10,26 +10,26 @@ colorama_init()
 def generate_keys():
     print(f"{Fore.YELLOW}Gerando chaves...{Style.RESET_ALL}")
     generate_rsa_keys()
-    input(f"{Fore.GREEN}Chaves geradas com sucesso! Pressione qualquer tecla para continuar.{Style.RESET_ALL}")
+    input(f"{Fore.GREEN}Chaves geradas com sucesso! Pressione ENTER para continuar.{Style.RESET_ALL}")
 
 def encrypt():
     print(f"{Fore.YELLOW}Criptografando dados...{Style.RESET_ALL}")
     try:
         encrypt_file()
     except FileNotFoundError as e:
-        input(f"{Fore.RED}Erro: {e} Pressione qualquer tecla para continuar.{Style.RESET_ALL}")
+        input(f"{Fore.RED}Erro: {e} Pressione ENTER para continuar.{Style.RESET_ALL}")
         return
-    input(f"{Fore.GREEN}Dados criptografados com sucesso! Pressione qualquer tecla para continuar.{Style.RESET_ALL}")
+    input(f"{Fore.GREEN}Dados criptografados com sucesso! Pressione ENTER para continuar.{Style.RESET_ALL}")
 
 def decrypt():
     print(f"{Fore.YELLOW}Descriptografando dados...{Style.RESET_ALL}")
     try:
         content = decrypt_file()
     except FileNotFoundError as e:
-        input(f"{Fore.RED}Erro: {e} Pressione qualquer tecla para continuar{Style.RESET_ALL}")
+        input(f"{Fore.RED}Erro: {e} Pressione ENTER para continuar{Style.RESET_ALL}")
         return
     print(f"{Fore.MAGENTA}Conteúdo original: {Style.RESET_ALL}{content}")
-    input(f"{Fore.GREEN}Dados descriptografados com sucesso! Pressione qualquer tecla para continuar.{Style.RESET_ALL}")
+    input(f"{Fore.GREEN}Dados descriptografados com sucesso! Pressione ENTER para continuar.{Style.RESET_ALL}")
 
 if __name__ == "__main__":
     while True:
@@ -43,7 +43,7 @@ if __name__ == "__main__":
         try:
             option = int(input(f"{Fore.CYAN}Escolha uma opção: {Style.RESET_ALL}"))
         except ValueError:
-            input(f"{Fore.RED}Opção inválida! Por favor, insira um número entre 0 e 3! Pressione qualquer tecla para continuar.{Style.RESET_ALL}")
+            input(f"{Fore.RED}Opção inválida! Por favor, insira um número entre 0 e 3! Pressione ENTER para continuar.{Style.RESET_ALL}")
             continue
 
         if option == 1:
@@ -56,4 +56,4 @@ if __name__ == "__main__":
             print(f"{Fore.GREEN}Saindo...{Style.RESET_ALL}")
             break
         else:
-            input(f"{Fore.RED}Opção inválida! Por favor, escolha um número entre 0 e 3! Pressione qualquer tecla para continuar.{Style.RESET_ALL}")
+            input(f"{Fore.RED}Opção inválida! Por favor, escolha um número entre 0 e 3! Pressione ENTER para continuar.{Style.RESET_ALL}")
