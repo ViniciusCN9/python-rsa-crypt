@@ -41,18 +41,18 @@ if __name__ == "__main__":
         print(f"{Fore.CYAN}0. Sair{Style.RESET_ALL}")
         
         try:
-            opcao = int(input(f"{Fore.CYAN}Escolha uma opção: {Style.RESET_ALL}"))
+            option = int(input(f"{Fore.CYAN}Escolha uma opção: {Style.RESET_ALL}"))
         except ValueError:
             input(f"{Fore.RED}Opção inválida! Por favor, insira um número entre 0 e 3! Pressione qualquer tecla para continuar.{Style.RESET_ALL}")
             continue
 
-        if opcao == 1:
+        if option == 1:
             generate_keys()
-        elif opcao == 2:
+        elif option == 2:
             encrypt()
-        elif opcao == 3:
+        elif option == 3:
             decrypt()
-        elif opcao == 0:
+        elif option == 0:
             print(f"{Fore.GREEN}Saindo...{Style.RESET_ALL}")
             break
         else:
